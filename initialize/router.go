@@ -8,7 +8,13 @@ import (
 // Routers initialize routers
 func Routers() *gin.Engine {
 	r := gin.Default()
+
+	// get router group
 	exampleGroup := router.RouterGroupApp.ExampleRouterGroup
+	k8sGroup := router.RouterGroupApp.K8SRouterGroup
+
+	// initialize routers
 	exampleGroup.InitExample(r)
+	k8sGroup.InitK8SRouter(r)
 	return r
 }

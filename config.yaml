@@ -1,2 +1,13 @@
 system:
   addr: ":8081"
+
+k8s:
+  kubeconfig: ".kube/config"
+
+logger:
+  filename: "/var/log/kube-x/runtime.log"
+  maxsize: 10        # megabytes
+  maxbackups: 5      # number of backups
+  maxage: 30         # days
+  compress: true     # enable compression
+  level: "debug"     # log level

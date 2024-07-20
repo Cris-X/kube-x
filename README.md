@@ -26,3 +26,9 @@ go get -u github.com/spf13/viper
 go get -u k8s.io/client-go@v0.30.2
 ```
 > docs: https://pkg.go.dev/k8s.io/client-go
+
+### log
+```bash
+go get -u go.uber.org/zap
+```
+> docs: https://pkg.go.dev/go.uber.org/zap
