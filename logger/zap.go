@@ -7,6 +7,12 @@ import (
 	"kube-x/global"
 )
 
+var Logger *zap.Logger
+
+func init() {
+	Logger = InitLogger()
+}
+
 func InitLogger() *zap.Logger {
 	writeSyncer := getLogWriter()
 	encoder := getEncoder()
