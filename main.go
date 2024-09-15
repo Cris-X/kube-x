@@ -16,8 +16,5 @@ func main() {
 	// 3.initialize k8s
 	initialize.K8S()
 
-	// 4.initialize logger
-	initialize.InitLogger()
-
 	panic(r.Run(global.CONF.System.Addr))
 }
