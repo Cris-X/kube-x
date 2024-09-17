@@ -32,3 +32,19 @@ go get -u k8s.io/client-go@v0.30.2
 go get -u go.uber.org/zap
 ```
 > docs: https://pkg.go.dev/go.uber.org/zap
+
+## Build & Push & Run image
+### build
+```bash
+docker build -t harbor.cris.com/kube-x/kube-x:v1.0 .
+```
+
+### push
+```bash
+docker push harbor.cris.com/kube-x/kube-x:v1.0
+```
+
+### run 
+```bash
+docker run --name kubeimooc-server --restart=always -d -p8081:8081 harbor.cris.com/kube-x/kube-x:v1.0
+```
